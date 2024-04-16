@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rescue Rapid app</title>
+    <title>Rescue Teams</title>
 </head>
 <body>
     <div>
-        <h2><u>User Registration</u></h2>
+        <h2><u>Rescue Team Registration</u></h2>
         <form action="./index.html" method="post">
             <table>
                 <tr>
-                    <td>Name :</td>
-                    <td><input type="text" name="Name"/></td>
+                    <td>Rescue Team Name :</td>
+                    <td><input type="text" name="teamName"/></td>
                 </tr>
                 <tr>
-                    <td>Email :</td>
-                    <td><input type="email" name="mail"/></td>
+                    <td>Rescue Team Owner Name :</td>
+                    <td><input type="text" name="ownerName"/></td>
                 </tr>
                 <tr>
                     <td>Address :</td>
@@ -56,8 +56,12 @@
                     <td><input type="number" name="mob"/></td>
                 </tr>
                 <tr>
-                    <td>Age :</td>
-                    <td><input type="number" name="age"/></td>
+                    <td>Email :</td>
+                    <td><input type="email" name="mail"/></td>
+                </tr>
+                <tr>
+                    <td>Facilities Available for rescue :</td>
+                    <td><textarea cols="20" rows="5" name="addr"></textarea></td>
                 </tr>
                 <tr>
                 <tr>
@@ -77,11 +81,6 @@
                     <td><input type="password" name="cfPswd"/></td>
                 </tr>
                 <tr>
-                    <td>Email :</td>
-                    <td><input type="email" name="mail"/></td>
-                </tr>
-               
-                <tr>
                     <td>
                         <input type="checkbox" name="termscondi" value="terms"/> I agree to the terms and conditions of the app Rescue Rapid
                     </td>
@@ -89,7 +88,7 @@
                 <tr>
                     </td>
                         <button type="button">
-                            <a href="./index.html">Register</a>
+                            <a href="./index.html">Register As Rescue Team</a>
                         </button>
                         <input type="reset" value="Cancel"/>
                     </td>
