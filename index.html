@@ -6,20 +6,24 @@
     <title>Rescue Rapid APP</title>
 </head>
 <body>
+    <style>
+        
+    </style>
     <div>
         <h2 style= text-align:center;><u>User Login</u></h2>
         <form action="./rrapp_features.html" method="post">
             <table style=margin-left:auto;margin-right:auto;>
                 <tr>
-                    <td><input type="text" name="fName" placeholder="USERNAME"/></td>
+                    <td><input type="text" name="uName" id="uName" placeholder="USERNAME"/></td>
                 </tr>
                 <tr>
-                    <td><input type="text" name="lName" placeholder="PASSWORD"/></td>
+                    <td><input type="text" name="pswd" id="pswd" placeholder="PASSWORD"/></td>
                 </tr>
                 <tr>
                 <td>
                     <p style=text-align:center;>
-                        <a href="./rrapp_aboutus.html">Login</a>
+                        <!-- <a href="./rrapp_aboutus.html">Login</a> -->
+                         <button type="button" onclick="checkLogin()" >Login</button>
                     </p>
                 </td>
                 </tr>
@@ -32,6 +36,24 @@
                 </tr>
             </table>
         </form>        
-    </div>   
+    </div> 
+    <script src="./controller.js"></script>  
+    <script>
+        function checkLogin(){
+            let uName = document.getElementById('uName').value;
+            let pswd = document.getElementById('pswd').value;
+
+            let sess = new UserSession();
+            sess.checkLogin(uName, pswd);
+
+            // if(uName == 'prajeethan' && pswd == 'playboy'){
+            //     localStorage.setItem('USER', uName);
+            //     window.location.href = './rrapp_aboutus.html';
+            // }else{
+            //     localStorage.removeItem('USER');
+            //     alert('Invalid Username/Password');
+            // }
+        }
+    </script>
 </body>
 </html>
