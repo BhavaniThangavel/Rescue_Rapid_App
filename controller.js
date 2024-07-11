@@ -13,17 +13,17 @@ class UserSession{
         // let uName = document.getElementById('uName').value;
         // let pswd = document.getElementById('pswd').value;
 
-        if(uName == 'prajeethan' && pswd == 'playboy'){
-            localStorage.setItem('USER', uName);
-            window.location.href = './rrapp_aboutus.html';
+        if(uName == 'bhavani@gmail.com' && pswd == 'pass123'){
+            sessionStorage.setItem('USER', uName);
+            window.location.href = './rrapp_homepage.html';
         }else{
-            localStorage.removeItem('USER');
+          sessionStorage.removeItem('USER');
             alert('Invalid Username/Password');
         }
     }
 
     verifySession(){
-        let user = localStorage.getItem('USER') || "";
+        let user = sessionStorage.getItem('USER') || "";
         if(user == ""){
           alert("Session Expired/ Not logged In.. Please login again");
           window.location.href = "./index.html";
